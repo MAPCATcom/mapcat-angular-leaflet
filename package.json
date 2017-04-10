@@ -1,7 +1,7 @@
 {
-  "name": "angular2-seed",
+  "name": "mapcat-angular2-leaflet",
   "version": "1.0.0",
-  "description": "A simple starter Angular2 project",
+  "description": "Sample minimal web frontend project showing Open Street Map using MapCat services with Angular2 and Leaflet.",
   "scripts": {
     "build": "webpack --progress",
     "watch": "npm run build -- --watch",
@@ -9,10 +9,7 @@
     "start": "npm run server",
     "lint": "tslint \"src/**/*.ts\" -e"
   },
-  "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
-  ],
+  "author": "GLI Solutions Ltd.",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~2.2.1",
@@ -36,7 +33,7 @@
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.12",
     "tslint": "^5.0.0",
-    "typescript": "^2.0.10",
+    "typescript": "=2.0.10",
     "zone.js": "~0.6.26"
   },
   "devDependencies": {
@@ -53,18 +50,19 @@
     "webpack-merge": "^0.15.0"
   },
   "keywords": [
-    "Angular2",
-    "mapcat",
-    "maps",
-    "open street map",
-    "leaflet"
+    "MapCat",
+    "angular2",
+    "leaflet",
+    "osm",
+    "openstreetmap",
+    "sample"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angular/angular2-seed.git"
+    "url": "git+https://github.com/MapCat-Com/mapcat-angular2-leaflet.git"
   },
   "bugs": {
-    "url": "https://github.com/angular/angular2-seed/issues"
+    "url": "git+https://github.com/MapCat-Com/mapcat-angular2-leaflet/issues"
   },
-  "homepage": "https://github.com/angular/angular2-seed#readme"
+  "homepage": "https://mapcat.com"
 }
