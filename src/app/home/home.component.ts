@@ -18,9 +18,8 @@ export class HomeComponent {
       maxZoom: 19
     });
 
-    // We use Raster tiles from our other product Terkepem.hu which is a fantastic navigation tool for Hungary.
     L.tileLayer('https://terkepem.hu/tile/{z}/{x}/{y}.png', {
-      attribution: 'Imagery &copy; 2017 GLI Solutions, Map data &copy;  OpenStreetMap contributors',
+      attribution: 'Imagery &copy; 2017 <a href="http://mapcat.com">MapCat</a>, Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a contributors',
       maxZoom: 18
     }).addTo(map);
   }
