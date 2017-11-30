@@ -1,8 +1,8 @@
 # -- Work in progress, not ready for use yet. --
 
-# Rendering MapCat maps from an Angular2 application with Leaflet
+# Rendering MapCat maps from an Angular 5 application with Leaflet
 
-This is a sample project showing how to render a map in an Angular2 web application. It's using [Leaflet](http://leafletjs.com/) for rendering the tiles served by the MapCat API.
+This is a sample project showing how to render a map in an Angular 5 web application. It's using [Leaflet](http://leafletjs.com/) for rendering the tiles served by the MapCat API.
 
 The language of this project is TypeScript and it is built with Webpack.
 
@@ -21,8 +21,8 @@ MapCat provides a couple of commercial services built on the OpenStreetMap datab
 For a quick start you can clone this repository:
 
 ```shell
-$ git clone -o mapcat-angular2-leaflet -b master --single-branch \
-      https://github.com/MapCat-Com/mapcat-angular2-leaflet.git MapCat-Sample
+$ git clone -o mapcat-angular-leaflet -b master --single-branch \
+      https://github.com/MAPCATcom/mapcat-angular-leaflet.git MapCat-Sample
 $ cd MapCat-Sample
 ```
 
@@ -36,9 +36,7 @@ This will install both run-time project dependencies and developer tools listed 
 
 ## Run in development mode
 
-```shell
-$ yarn start
-```
+```$ yarn start``` or ```$ npm start```
 
 This command will start a webpack development server listening to requests at: ```http://localhost:3000/```
 
@@ -46,31 +44,20 @@ This command will start a webpack development server listening to requests at: `
 
 For a production build run:
 
-```shell
-$ yarn run build
-```
+```$ yarn run build``` or ```$ npm run build```
 
 The compiled, optimized static files will be put into the `build` folder.
 
 For ESLint run:
 
-```shell
-$ yarn run lint
-```
-
-## Notice
-
-The project uses exactly the 2.0.10 version of the typescript package as a workaround for this [issue](https://github.com/s-panferov/awesome-typescript-loader/issues/190)
+```$ yarn run lint``` or ```$ npm run lint```
 
 # FAQ
 
 ## What are we doing exactly?
 
-This project is a seed project that can help you get started with building leaflet applications on Angular2 using terkepem.hu map layers.
+This project is a seed project that can help you get started with building leaflet applications on Angular 5 using MAPCAT map layers.
 
 ## Type definitions
 
 Leaflet doesn't come bundled as a typed library. In order to be able to use Leaflet with TypeScript, type definitions from @type/leaflet are used as a dependency.
-
-
-
