@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
+global.Buffer = global.Buffer || require('buffer').Buffer;
+const mapview = require ('../../../node_modules/@mapcat/mapview-init/src/mapcat-mapview-init.js');
 
 @Component({
   selector: 'home',
@@ -9,21 +11,29 @@ import * as L from 'leaflet';
 export class HomeComponent {
 
   ngOnInit() {
-    // Initialize the map on leaflet.
-    let map = L.map('map', {
-      zoomControl: false,
-      center: L.latLng(47.4979, 19.0402),
-      zoom: 13,
-      minZoom: 0,
-      maxZoom: 19
+    // Initialize MAPCAT mapview
+    mapview.initRasterView('NrP1WQLjuHTU220tHAbs3fzRdIg0nmhjMeL2pvwj', null, null, function(error, response) {
+      if (error) {
+        if (typeof(error) === 'object') {
+          alert(error.message);
+        } else {
+          alert(error);
+        }
+      } else {
+        // Initialize the map on leaflet.
+        let map = L.map('map', {
+          zoomControl: true,
+          center: L.latLng(51.5, 0),
+          zoom: 13,
+          minZoom: 0,
+          maxZoom: 18
+        });
+
+        L.tileLayer(response, {
+          attribution: 'Imagery &copy; 2017 <a href="http://mapcat.com">MapCat</a>, Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a contributors',
+          maxZoom: 18
+        }).addTo(map);
+      }
     });
-
-    L.tileLayer('https://terkepem.hu/tile/{z}/{x}/{y}.png', {
-      attribution: 'Imagery &copy; 2017 <a href="http://mapcat.com">MapCat</a>, Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a contributors',
-      maxZoom: 18
-    }).addTo(map);
   }
-
-
-
 }
