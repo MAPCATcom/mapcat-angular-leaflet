@@ -12,7 +12,7 @@ export class HomeComponent {
 
   ngOnInit() {
     // Initialize MAPCAT mapview
-    mapview.initRasterView('NrP1WQLjuHTU220tHAbs3fzRdIg0nmhjMeL2pvwj', null, null, function(error, response) {
+    mapview.initRasterView('jM9oGlsfWxOOYYF0kvuq2UbYl3XrVuUzJmwfnB6M', null, null, function(error, response) {
       if (error) {
         if (typeof(error) === 'object') {
           alert(error.message);
