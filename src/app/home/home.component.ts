@@ -12,7 +12,7 @@ export class HomeComponent {
 
   ngOnInit() {
     // Initialize MAPCAT mapview
-    mapview.initRasterView('jM9oGlsfWxOOYYF0kvuq2UbYl3XrVuUzJmwfnB6M', null, null, function(error, response) {
+    mapview.initRasterView(function(error, response) {
       if (error) {
         if (typeof(error) === 'object') {
           alert(error.message);
@@ -34,6 +34,6 @@ export class HomeComponent {
           maxZoom: 18
         }).addTo(map);
       }
-    });
+    }, 'jM9oGlsfWxOOYYF0kvuq2UbYl3XrVuUzJmwfnB6M');
   }
 }
